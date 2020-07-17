@@ -2,7 +2,7 @@ DSAGEN Components
 ===============================
 
 
-Spatial Scheduler
+Spatial Scheduling Libraries
 -------------------------------------------
 **config library**
   The configuration library contains mechanisms to specify a design
@@ -21,7 +21,7 @@ Simulation
   gem5 is a modular platform for computer-system architecture research, encompassing system-level architecture as well as processor microarchitecture.
   ssim is embedded within gem5, currently supporting integration with the inorder core (minor).
 
-Workloads
+Associated Workloads
 -------------------------------------------
 
 External Suites
