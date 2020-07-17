@@ -1,7 +1,7 @@
-Placeholder
+Spatial Scheduler
 ================================
 
-Some placeholder text
+Describe the spatial scheduler.
 
 .. toctree::
    :maxdepth: 2
