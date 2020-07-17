@@ -1,4 +1,4 @@
-Placeholder
+C Compiler
 ================================
 
 Some placeholder text
