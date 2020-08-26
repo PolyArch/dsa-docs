@@ -24,9 +24,7 @@ strategy is chosen; many components are similar.
 
 Depending on the task, it may be easier to lower-level intrinsics.  Generally, the more you
 ask out of the compiler (ie. the harder/more data-dependent/irregular the code is), the less
-likely the compiler is to do what you want[#]_.  
-
-..[#] Less likely for now at least, we're workign it.
+likely the compiler is to do what you want [#]_.  
 
 Regardless of the model you use, it's helpful to understand the execution model of the hardware,
 which is heavily inspired from `stream-dataflow <https://doi.org/10.1145/3079856.3080255>`_.  
@@ -47,5 +45,6 @@ paradigms in the following pages.
 .. toctree::
    :maxdepth: 2
 
+.. [#] Less likely for now at least, we're working on it.
 
 
