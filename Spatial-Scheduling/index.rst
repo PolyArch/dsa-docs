@@ -8,4 +8,6 @@ spatial architectures.
 .. toctree::
    :maxdepth: 2
 
+   DFG-Reference
+
 
