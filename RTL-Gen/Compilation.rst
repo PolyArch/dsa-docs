@@ -1,13 +1,9 @@
-Programming Interface
+Compile Verilator for RTL simulation
 ================================
 
 This is a guide to using the RTL generation framework.
 
 .. toctree::
    :maxdepth: 2
-
-    SDKWalkthrough
-    EmbeddedASMDFG
-    CCompiler
 
 

@@ -1,13 +1,9 @@
-Programming Interface
+Hardware Architecture Overview
 ================================
 
 This is a guide to using the RTL generation framework.
 
 .. toctree::
    :maxdepth: 2
-
-    SDKWalkthrough
-    EmbeddedASMDFG
-    CCompiler
 
 

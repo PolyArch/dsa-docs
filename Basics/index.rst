@@ -10,6 +10,9 @@ These sections will walk you through the basics of the DSA framework:
 .. toctree::
    :maxdepth: 2
 
+   Setup
    Overview
    Components
-   Repo-Setup
+   E2EDemo
+
+

@@ -1,4 +1,5 @@
-# Dataflow Graph (DFG) Reference
+Dataflow Graph Syntax Reference
+================================
 
 The Dataflow Graph (DFG) is a representation of the dataflow of a program. It is a directed graph where the nodes are the operations and the edges are the data dependencies between the operations. The DFG is a static representation of the dataflow of a program. It is not a representation of the actual dataflow at runtime.
 
@@ -279,8 +280,6 @@ Output64: OutC destination=a
 ```
 
 The resulting dataflow graph looks like the following:
-
-
 
 .. toctree::
    :maxdepth: 2

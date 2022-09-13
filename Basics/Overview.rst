@@ -1,4 +1,4 @@
-DSAGEN Overview
+Overview
 ===============================
 
 DSAGEN is a research infrastructure for studying programmable accelerators from the perspective of programming, ISAs, microarchitecture, and scaling.

@@ -11,7 +11,7 @@ class of programmable accelerators.  DSAGEN makes use of a variety of tools
 for spatial-scheduling, compilation, simulation, ISA-generation, and hardware
 generation.
 
-.. IMPORTANT:: **New to DSAGEN?** Jump to the :ref:`Repo Setup` page for setup instructions.
+.. IMPORTANT:: **New to DSAGEN?** Jump to the :ref:`Setup` page for setup instructions.
 
 .. toctree::
    :maxdepth: 2
@@ -19,17 +19,15 @@ generation.
 
    Basics/index
 
-   Programming/index
-
-   Workloads/index
-
    ISA/index
 
-   Spatial-Scheduling/index
+   Programming/index
 
-   C-Compiler/index   
+   Scheduler/index
 
    RTL-Gen/index
+
+   Workloads/index
 
 
 Indices and tables
