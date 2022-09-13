@@ -9,6 +9,4 @@ The Compiler automatically creates DFG files. The DFG files are used by the simu
    :maxdepth: 4
 
    fileformat
-   accexample
-   accvecexample
-   complexexample
+   examples

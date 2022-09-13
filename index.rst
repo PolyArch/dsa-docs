@@ -14,7 +14,7 @@ generation.
 .. IMPORTANT:: **New to DSAGEN?** Jump to the :ref:`Setup` page for setup instructions.
 
 .. toctree::
-   :maxdepth: 6
+   :maxdepth: 2
    :caption: Contents:
 
    Basics/index
