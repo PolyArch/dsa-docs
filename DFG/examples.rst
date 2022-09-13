@@ -173,4 +173,4 @@ The resulting dataflow graph looks like the following:
 .. image:: example_dfgs/stencil2d.png
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
