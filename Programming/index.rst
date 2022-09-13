@@ -1,13 +1,13 @@
-Programming Interface
+Programming interface
 ================================
 
-This is a guide to using the RTL generation framework.
+This library contains tools to describe, model, and compile/schedule for
+spatial architectures.  
+
 
 .. toctree::
    :maxdepth: 2
 
-    SDKWalkthrough
-    EmbeddedASMDFG
-    CCompiler
-
-
+   SDKWalkthrough
+   CCompiler
+   EmbeddedASMDFG
