@@ -6,7 +6,7 @@ The Dataflow Graph (DFG) is a representation of the dataflow of a program. It is
 The Compiler automatically creates DFG files. The DFG files are used by the simulator and scheduler to map onto the actual hardware. DFG files can also be manually created, this section acts as a reference on reading and creating custom DFG files.
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 4
 
    fileformat
    accexample
