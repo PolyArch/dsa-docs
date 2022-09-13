@@ -121,4 +121,4 @@ The unroll pragma refers to the vectorization degree of the sub-dfg. This pragma
 The DFG parser also supports comments with lines that are preceded by a hashtag (`#`). The last line of the dfgfile must also be a blank space.
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 4

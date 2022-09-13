@@ -94,4 +94,4 @@ This is an example of a manually programmed DFG for the Stencil-2d workload.
 The resulting dataflow graph looks like the following:
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 4

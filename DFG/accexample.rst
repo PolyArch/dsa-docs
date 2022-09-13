@@ -32,4 +32,4 @@ The following is an example of a DFG file for a non-vectorized add operation:
 This produces a dataflow graph that looks like the following:
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 4
