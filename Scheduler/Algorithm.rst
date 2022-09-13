@@ -1,5 +1,5 @@
-Spatial Mapping Overview
-================================
+Spatial Mapping Algorithm
+=========================
 
 This library contains tools to describe, model, and compile/schedule for
 spatial architectures.  

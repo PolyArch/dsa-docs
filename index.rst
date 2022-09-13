@@ -23,7 +23,13 @@ generation.
 
    Programming/index
 
+   DFG/index
+   
+   ADG/index
+
    Scheduler/index
+
+   DSE/index
 
    RTL-Gen/index
 

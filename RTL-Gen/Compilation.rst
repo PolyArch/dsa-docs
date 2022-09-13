@@ -1,5 +1,5 @@
-Compile Verilator for RTL simulation
-================================
+Compile Verilator for RTL Simulation
+====================================
 
 This is a guide to using the RTL generation framework.
 

@@ -1,5 +1,5 @@
-Spatial Scheduler
-=================
+Spatial Mapping Rules
+=====================
 
 This library contains tools to describe, model, and compile/schedule for
 spatial architectures.  
@@ -7,9 +7,3 @@ spatial architectures.
 
 .. toctree::
    :maxdepth: 2
-
-   Usage
-   Algorithm
-   Rules
-
-
