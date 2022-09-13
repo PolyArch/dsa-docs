@@ -13,8 +13,8 @@ The following is an example of a DFG file for a non-vectorized add operation:
    #pragma group frequency 0
 
    # Array Declaration
-   Array array_a 131072 dma
-   Array array_b 131072 dma
+   Array: array_a 131072 dma
+   Array: array_b 131072 dma
 
    ----
    # Declare sub-dfg meta properties
@@ -23,16 +23,18 @@ The following is an example of a DFG file for a non-vectorized add operation:
    #pragma group unroll 1
 
    # Port Declaration
-   Input64 a source=array_a
-   Input64 b source=array_b
+   Input64: a source=array_a
+   Input64: b source=array_b
 
    # Operation Declaration
-   c = add(a, b)
+   c = Add_I64(a, b)
 
    # Output Declaration
-   Output64 c destination=array_c
+   Output64: c destination=array_a
 
 This produces a dataflow graph that looks like the following:
+
+.. image:: example_dfgs/accumulate.png
 
 Acc Vectorization Example
 -------------------------
@@ -47,8 +49,8 @@ The following is an example of a DFG file for a vectorized-by-four add operation
    #pragma group frequency 0
 
    # Array Declaration
-   Array array_a 131072 dma
-   Array array_b 131072 dma
+   Array: array_a 131072 dma
+   Array: array_b 131072 dma
 
    ----
    # Declare sub-dfg meta properties
@@ -57,19 +59,21 @@ The following is an example of a DFG file for a vectorized-by-four add operation
    #pragma group unroll 4
 
    # Port Declaration
-   Input64 a[4] source=array_a
-   Input64 b[4] source=array_b
+   Input64: a_[4] source=array_a
+   Input64: b_[4] source=array_b
 
    # Operation Declaration
-   c_0 = add(a_0, b_0)
-   c_1 = add(a_1, b_1)
-   c_2 = add(a_2, b_2)
-   c_3 = add(a_3, b_3)
+   c_0 = Add_I64(a_0, b_1)
+   c_1 = Add_I64(a_1, b_1)
+   c_2 = Add_I64(a_2, b_2)
+   c_3 = Add_I64(a_3, b_3)
 
    # Output Declaration
-   Output64 c destination=array_c
+   Output64: c_[4] destination=array_b
 
 This produces a dataflow graph that looks like the following:
+
+.. image:: example_dfgs/accumulate_vectorized.png
 
 Complex Example
 ---------------
@@ -165,6 +169,8 @@ This is an example of a manually programmed DFG for the Stencil-2d workload.
    Output64: OutC destination=a
 
 The resulting dataflow graph looks like the following:
+
+.. image:: example_dfgs/stencil2d.png
 
 .. toctree::
    :maxdepth: 2
