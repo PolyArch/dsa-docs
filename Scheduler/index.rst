@@ -6,7 +6,7 @@ spatial architectures. The scheduler acts as an in-between, mapping software pro
 
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
    Usage
    Algorithm
