@@ -34,6 +34,8 @@ In this tutorial, we will present one such approach for programmable accelerator
 Syllabus and Schedule
 ---------------------
 
+.. image:: images/stack.pdf
+
 .. figure:: images/stack.pdf
 
    **Figure 2:** The framework stack of DSAGEN.
