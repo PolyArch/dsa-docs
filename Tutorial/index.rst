@@ -1,17 +1,18 @@
 MICRO 2022 Tutorial
 ================================
 
+.. figure:: images/dsagen.png
 
 Organizers
 ----------
 
-| `Jian Weng`_, `Sihao Liu`_, `Dylan Kupsh`_, `Tony Nowatzki`_
+| `Sihao Liu`_, `Jian Weng`_, `Dylan Kupsh`_, `Tony Nowatzki`_
 | `PolyArch Research Group`_.
 | University of California, Los Angeles
 | Date/Time: Sunday October 2nd, 1:00pm - 5:00pm CDT
 
-.. _Jian Weng: http://were.github.io/
 .. _Sihao Liu: http://web.cs.ucla.edu/~sihao/
+.. _Jian Weng: http://were.github.io/
 .. _Dylan Kupsh: https://web.cs.ucla.edu/~dkupsh/
 .. _Tony Nowatzki: http://web.cs.ucla.edu/~tjn/
 .. _PolyArch Research Group: https://polyarch.cs.ucla.edu/
@@ -96,10 +97,10 @@ Syllabus and Schedule
       + Measure performance on generated accelerator
       + Visualize the DSE process and generated accelerator designs
 
-Installing DSA-GEN
+Installing DSAGEN
 ------------------
 
-To build the DSA-GEN Framework, you will need to install Docker. Please follow the instructions on the official `docker website`_.
+To build the DSAGEN Framework, you will need to install Docker. Please follow the instructions on the official `docker website`_.
 
 .. _docker website: https://docs.docker.com/engine/install/ubuntu/
 
@@ -114,16 +115,16 @@ Then, build the docker image:
 
 .. code-block:: bash
 
-   $ docker build -t dsa-framework .
+   $ docker build .
 
 Related Papers
 --------------
 
-#. V. Dadu and T. Nowatzki, “Towards general purpose acceleration by exploiting common data-dependence forms,” in 52nd MICRO, 2019.
-#. T. Nowatzki, V. Gangadhar, N. Ardalani, and K. Sankaralingam, “Streamdataflow acceleration,” in 44th ISCA, 2017
-#. J. Weng, S. Liu, V. Dadu, Z. Wang, and T. Nowatzki, “DSAGEN: Synthesizing programmable spatial accelerators,” in ISCA, 2020.
-#. J. Weng, S. Liu, Z. Wang, V. Dadu, and T. Nowatzki, “A hybrid systolicdataflow architecture for inductive matrix algorithms,” in HPCA, 2020.
 #. S. Liu, J. Weng, D. Kupsh, A. Sohrabizadeh, Z. Wang, L. Guo, J. Liu, M. Zhulin, L. Zhang, J. Cong, T. Nowatzki, "OverGen: Improving FPGA Usability through Domain-specific Overlay Generation" in 55th MICRO, 2022.
+#. J. Weng, S. Liu, V. Dadu, Z. Wang, and T. Nowatzki, “DSAGEN: Synthesizing programmable spatial accelerators” in ISCA, 2020.
+#. J. Weng, S. Liu, Z. Wang, V. Dadu, and T. Nowatzki, “A hybrid systolicdataflow architecture for inductive matrix algorithms” in HPCA, 2020.
+#. V. Dadu and T. Nowatzki, “Towards general purpose acceleration by exploiting common data-dependence forms” in 52nd MICRO, 2019.
+#. T. Nowatzki, V. Gangadhar, N. Ardalani, and K. Sankaralingam, “Stream-Dataflow Acceleration” in 44th ISCA, 2017
 
 .. toctree::
    :maxdepth: 1
