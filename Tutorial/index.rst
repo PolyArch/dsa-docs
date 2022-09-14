@@ -40,38 +40,40 @@ Syllabus and Schedule
 
 .. download link :download:`slides<slides/tutorial-intro.pptx>`
 
-**Introduction (20 Minutes):** [:download:`slides<slides/tutorial-intro.pptx>`] (coming soon)
+**Introduction (20 Minutes):** [slides coming soon]
 
-* Introduction to Decoupled-Spatial Accelerators
-* DSAGEN: A Framework for Decoupled-Spatial Accelerator Research
+- Introduction to Decoupled-Spatial Accelerators
+- DSAGEN: A Framework for Decoupled-Spatial Accelerator Research
 
 
-**Basic Programming (40 Minutes):** [slides] (coming soon)
+**Basic Programming (40 Minutes):** [slides coming soon]
 
 - Building DSAGEN
 - Vector Addition
+
    + Hardware/Software Interface Overview
    + Writing a Dataflow Graph
    + Writing the Control Intrinsics
+
 - Vector Normalization
+
    + Signaled Accumulation
    + Concurrent DFG's
    + Additional Control Intrinsics
+
 - Compilation Limitations
 
 **5-Minute Break**
 
-**Design-Space Exploartion (40 Minutes):** [slides] (coming soon)
+**Design-Space Exploartion (40 Minutes):** [slides coming soon]
 
-* Automatically Optimizing Accelerator using the Design Space Explorer
+- Automatically Optimizing Accelerator using the Design Space Explorer
 
 **5-Minute Break**
 
-**Handcrafting Architectures:** [slides] (coming soon)
+**Handcrafting Architectures:** [slides coming soon]
 
-**Extending DSAGEN for your Own Research** [slides] (coming soon)
-
-
+**Extending DSAGEN for your Own Research** [slides coming soon]
 
 Docker Build
 ------------
