@@ -67,7 +67,9 @@ Syllabus and Schedule
 
 **Design-Space Exploartion (40 Minutes):** [slides coming soon]
 
-- Automatically Optimizing Accelerator using the Design Space Explorer
+- Generating Workload Sets to Optimize
+- Automatically Optimize Accelerators using the Design Space Explorer
+- Visualizing Optimized Accelerator Designs
 
 **5-Minute Break**
 
@@ -81,13 +83,11 @@ Docker Build
 Related Papers
 --------------
 
-1. V. Dadu and T. Nowatzki, “Towards general purpose acceleration by exploiting common data-dependence forms,” in 52nd MICRO, 2019.
-
-2. T. Nowatzki, V. Gangadhar, N. Ardalani, and K. Sankaralingam, “Streamdataflow acceleration,” in 44th ISCA, 2017
-
-3. J. Weng, S. Liu, V. Dadu, Z. Wang, and T. Nowatzki, “Dsagen: Synthesizing programmable spatial accelerators,” in ISCA, 2020.
-
-4. J. Weng, S. Liu, Z. Wang, V. Dadu, and T. Nowatzki, “A hybrid systolicdataflow architecture for inductive matrix algorithms,” in HPCA, 2020.
+#. V. Dadu and T. Nowatzki, “Towards general purpose acceleration by exploiting common data-dependence forms,” in 52nd MICRO, 2019.
+#. T. Nowatzki, V. Gangadhar, N. Ardalani, and K. Sankaralingam, “Streamdataflow acceleration,” in 44th ISCA, 2017
+#. J. Weng, S. Liu, V. Dadu, Z. Wang, and T. Nowatzki, “Dsagen: Synthesizing programmable spatial accelerators,” in ISCA, 2020.
+#. J. Weng, S. Liu, Z. Wang, V. Dadu, and T. Nowatzki, “A hybrid systolicdataflow architecture for inductive matrix algorithms,” in HPCA, 2020.
+#. S. Liu, J. Weng, D. Kupsh, A. Sohrabizadeh, Z. Wang, L. Guo, J. Liu, M. Zhulin, L. Zhang, J. Cong, T. Nowatzki, "OverGen: Improving FPGA Usability through Domain-specific Overlay Generation" in 55th MICRO, 2022.
 
 .. toctree::
    :maxdepth: 1
