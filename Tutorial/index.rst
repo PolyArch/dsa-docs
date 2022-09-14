@@ -77,8 +77,25 @@ Syllabus and Schedule
 
 **Extending DSAGEN for your Own Research** [slides coming soon]
 
-Docker Build
-------------
+Installing DSA-GEN
+------------------
+
+To build the DSA-GEN Framework, you will need to install Docker. Please follow the instructions on the official `docker website`_.
+
+.. _docker website: https://docs.docker.com/engine/install/ubuntu/
+
+Start by cloning the repository:
+
+.. code-block:: bash
+
+   $ git clone https://github.com/PolyArch/dsa-framework.git
+
+Then, build the docker image:
+
+.. code-block:: bash
+
+   $ cd dsa-framework
+   $ docker build -t dsa-framework .
 
 Related Papers
 --------------
