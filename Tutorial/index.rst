@@ -19,7 +19,8 @@ Organizers
 Tutorial Overview
 -----------------
 
-.. image:: images/figure.svg
+.. figure:: images/figure.svg
+   **Figure 1:** Synthesizing Programmable Accelerators.
 
 Because of the wanning benefit of transistor scaling, significant research has emerge for specialized accelerators, becuase of their promising performance and energy saving. While effective, the require intensive engineering for the hardware and software, and this efforts will be repeated when the underlying application domain shifts.
 
@@ -27,14 +28,15 @@ Ideally, one will be able to generate the accelerators based on the behaviors of
 
 The first principle of our approach is to define a useful but restricted design space. Specifically we use decoupled-spatial accelerators, where memory accesses are decoupled from computation pipelines, and the underlying hardware network/storage/timing is exposed in the ISA. The second principle is to enable a rich accelerator design space by specifying architectures as a composition of simple primitives, including memories, processing elements, and network/synchronization components. An architecture instance can be represented as graph – the architecture description graph (ADG) – where each node is a hardware primitive. The ADG is an abstraction for the compiler (it is used to derive the ISA) as well as RTL generation.
 
-DSAGEN Framework: This approach is embodied in our framework, DSAGEN, which is overviewed in Figure 2. DSAGEN targets C programs with custom, but application neutral pragmas. The compiler infrastructure uses Clang and LLVM as a frontend, and ultimately represents programs as a decoupled dataflow graph + memory streams. A low-level assembly-level interface is provided for ninja programmers. We include a custom spatial-architecture compiler and backend. The hardware design space includes many spatial architecture optimizations from prior works [1]–[4]. The compiler backend generates programs embedded in a RISCV ISA for control. DSAGEN supports multicore simulationi in gem5, and it uses Chisel for hardware generation.
+**DSAGEN Framework:** This approach is embodied in our framework, DSAGEN, which is overviewed in Figure 2. DSAGEN targets C programs with custom, but application neutral pragmas. The compiler infrastructure uses Clang and LLVM as a frontend, and ultimately represents programs as a decoupled dataflow graph + memory streams. A low-level assembly-level interface is provided for ninja programmers. We include a custom spatial-architecture compiler and backend. The hardware design space includes many spatial architecture optimizations from prior works [1]–[4]. The compiler backend generates programs embedded in a RISCV ISA for control. DSAGEN supports multicore simulationi in gem5, and it uses Chisel for hardware generation.
 
 Syllabus and Schedule
 ---------------------
 
-.. image:: images/tutorial.svg
+.. figure:: images/tutorial.svg
+   **Figure 2:** An Overview of the DSAGEN Stack.
 
-**Introduction (20 Minutes):** [slides] (coming soon)
+**Introduction (20 Minutes):** [:download:`slides<slides/tutorial-intro.pptx>`] (coming soon)
 
 * Introduction to Decoupled-Spatial Accelerators
 * DSAGEN: A Framework for Decoupled-Spatial Accelerator Research
