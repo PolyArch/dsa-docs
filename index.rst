@@ -19,6 +19,8 @@ generation.
 
    Basics/index
 
+   Tutorial/index
+
    ISA/index
 
    Programming/index

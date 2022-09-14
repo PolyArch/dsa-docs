@@ -6,7 +6,7 @@ Accumulate Example
 
 The following is an example of a DFG file for a non-vectorized add operation:
 
-::
+.. code-block::
 
    # Declare sub-dfg meta properties
    # Frequency is 0 as no work happens in this sub-dfg
@@ -42,7 +42,7 @@ Acc Vectorization Example
 
 The following is an example of a DFG file for a vectorized-by-four add operation:
 
-::
+.. code-block::
 
    # Declare sub-dfg meta properties
    # Frequency is 0 as no work happens in this sub-dfg
@@ -80,7 +80,7 @@ Complex Example
 
 This is an example of a manually programmed DFG for the Stencil-2d workload.
 
-:: 
+.. code-block::
    
    # Declare sub-dfg meta properties
    # Frequency is 0 as no work happens in this sub-dfg

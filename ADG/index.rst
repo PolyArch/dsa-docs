@@ -40,4 +40,7 @@ Processing Elements operate as the functional units within the CGRA. Their main 
 
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
+   
+   fileformat
+   example
