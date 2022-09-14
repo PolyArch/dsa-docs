@@ -19,7 +19,8 @@ Organizers
 Tutorial Overview
 -----------------
 
-.. figure:: images/figure.svg
+.. figure:: images/tutorial.svg
+
    **Figure 1:** Synthesizing Programmable Accelerators.
 
 Because of the wanning benefit of transistor scaling, significant research has emerge for specialized accelerators, becuase of their promising performance and energy saving. While effective, the require intensive engineering for the hardware and software, and this efforts will be repeated when the underlying application domain shifts.
@@ -33,8 +34,13 @@ The first principle of our approach is to define a useful but restricted design 
 Syllabus and Schedule
 ---------------------
 
-.. figure:: images/tutorial.svg
+.. figure:: images/figure.svg
+
    **Figure 2:** An Overview of the DSAGEN Stack.
+
+..
+
+   :download:`slides<slides/tutorial-intro.pptx>`
 
 **Introduction (20 Minutes):** [:download:`slides<slides/tutorial-intro.pptx>`] (coming soon)
 
