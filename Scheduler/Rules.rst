@@ -8,6 +8,7 @@ The following list contains the rules that are used to determine whether a given
 Example:
 
 ::
+   
    - Invalid:    | ___ | OPA | OPA | ___ |
    - Valid:      | OPA | OPA | ___ | ___ |
    - Valid:      | ___ | ___ | OPA | OPA |
@@ -22,6 +23,7 @@ Example:
 Exampe:
 
 ::
+
    - Invalid: SPM0 -> SWITCH0 -> IVP0
 
 #. A dfg edge entering a non-switch must come in at an even slot
@@ -29,6 +31,7 @@ Exampe:
 Example:
 
 ::
+
    - Invalid:    | ___ | OPA | OPA | ___ |
    - Valid:      | OPA | OPA | ___ | ___ |
    - Valid:      | ___ | ___ | OPA | OPA |
@@ -48,6 +51,7 @@ Example:
 Example:
 
 ::
+
    A 16 bit edge mapped to a Node with granularity 32 and datawidth 64 bit granularity
    - Valid: Mapping edge to bits: [0:16] or [32:48]
    - Invalid: Mapping edge to bits: [16:32] or [48:64]
