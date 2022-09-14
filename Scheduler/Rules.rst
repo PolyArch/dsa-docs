@@ -5,13 +5,13 @@ The following list contains the rules that are used to determine whether a given
 
 #. Vertex slots must be mapped to even slots.
 
-Example:
+   Example:
 
-::
-   
-   - Invalid:    | ___ | OPA | OPA | ___ |
-   - Valid:      | OPA | OPA | ___ | ___ |
-   - Valid:      | ___ | ___ | OPA | OPA |
+   ::
+
+      - Invalid:    | ___ | OPA | OPA | ___ |
+      - Valid:      | OPA | OPA | ___ | ___ |
+      - Valid:      | ___ | ___ | OPA | OPA |
 
 #. Two DFG ports can not be mapped to a single VectorPort.
 #. The stated dfg edge is always 8 bits wide.
@@ -38,23 +38,24 @@ Example:
 
 #. A switch can map to any contiguous slot.
 
-Example:
+   Example:
 
-::
-   - Valid:      | ___ | OPA | OPA | ___ |
-   - Valid:      | OPA | OPA | ___ | ___ |
-   - Valid:      | OPA | ___ | ___ | OPA |
-   - Invalid:    | OPA | ___ | OPA | ___ |
+   ::
+      
+      - Valid:      | ___ | OPA | OPA | ___ |
+      - Valid:      | OPA | OPA | ___ | ___ |
+      - Valid:      | OPA | ___ | ___ | OPA |
+      - Invalid:    | OPA | ___ | OPA | ___ |
 
 #. A lower bitwidth edge must always be mapped to the lower bits of a granularity.
 
-Example:
+   Example:
 
-::
+   ::
 
-   A 16 bit edge mapped to a Node with granularity 32 and datawidth 64 bit granularity
-   - Valid: Mapping edge to bits: [0:16] or [32:48]
-   - Invalid: Mapping edge to bits: [16:32] or [48:64]
+      A 16 bit edge mapped to a Node with granularity 32 and datawidth 64 bit granularity
+      - Valid: Mapping edge to bits: [0:16] or [32:48]
+      - Invalid: Mapping edge to bits: [16:32] or [48:64]
 
 
 
