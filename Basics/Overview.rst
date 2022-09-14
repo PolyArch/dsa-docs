@@ -13,8 +13,6 @@ kernels are produced as output, composed of control code and the accelerator
 bitstream.  We use a control code to sequence through the accelerator phases,
 as this reduce the complexity of what is required in most accelerators.
 
-.. image:: tutorial.png
-
 What design space does DSAGEN target?
 
   Broadly, DSAGEN targets decoupled spatial designs.  By "spatial" we mean
