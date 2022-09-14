@@ -38,9 +38,7 @@ Syllabus and Schedule
 
    **Figure 2:** An Overview of the DSAGEN Stack.
 
-..
-
-   :download:`slides<slides/tutorial-intro.pptx>`
+.. download link :download:`slides<slides/tutorial-intro.pptx>`
 
 **Introduction (20 Minutes):** [:download:`slides<slides/tutorial-intro.pptx>`] (coming soon)
 
@@ -50,16 +48,16 @@ Syllabus and Schedule
 
 **Basic Programming (40 Minutes):** [slides] (coming soon)
 
-* Building DSAGEN
-* Vector Addition
-   * Hardware/Software Interface Overview
-   * Writing a Dataflow Graph
-   * Writing the Control Intrinsics
-* Vector Normalization
-   * Signaled Accumulation
-   * Concurrent DFG's
-   * Additional Control Intrinsics
-* Compilation Limitations
+- Building DSAGEN
+- Vector Addition
+   + Hardware/Software Interface Overview
+   + Writing a Dataflow Graph
+   + Writing the Control Intrinsics
+- Vector Normalization
+   + Signaled Accumulation
+   + Concurrent DFG's
+   + Additional Control Intrinsics
+- Compilation Limitations
 
 **5-Minute Break**
 
