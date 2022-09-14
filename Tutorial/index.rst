@@ -19,7 +19,7 @@ Organizers
 Tutorial Overview
 -----------------
 
-.. figure:: images/tutorial.svg
+.. figure:: images/tutorial.pdf
 
    **Figure 1:** Programmable Accelerator Synthesis.
 
