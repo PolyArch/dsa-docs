@@ -14,11 +14,12 @@ Organizers
 .. _Sihao Liu: http://web.cs.ucla.edu/~sihao/
 .. _Dylan Kupsh: https://web.cs.ucla.edu/~dkupsh/
 .. _Tony Nowatzki: http://web.cs.ucla.edu/~tjn/
-
 .. _PolyArch Research Group: https://polyarch.cs.ucla.edu/
 
 Tutorial Overview
 -----------------
+
+.. image:: images/figure.svg
 
 Because of the wanning benefit of transistor scaling, significant research has emerge for specialized accelerators, becuase of their promising performance and energy saving. While effective, the require intensive engineering for the hardware and software, and this efforts will be repeated when the underlying application domain shifts.
 
@@ -31,6 +32,8 @@ DSAGEN Framework: This approach is embodied in our framework, DSAGEN, which is o
 Syllabus and Schedule
 ---------------------
 
+.. image:: images/tutorial.svg
+
 **Introduction (20 Minutes):** [slides] (coming soon)
 
 * Introduction to Decoupled-Spatial Accelerators
@@ -39,16 +42,16 @@ Syllabus and Schedule
 
 **Basic Programming (40 Minutes):** [slides] (coming soon)
 
-| * Building DSAGEN
-| * Vector Addition
-|    * Hardware/Software Interface Overview
-|    * Writing a Dataflow Graph
-|    * Writing the Control Intrinsics
-| * Vector Normalization
-|    * Signaled Accumulation
-|    * Concurrent DFG's
-|    * Additional Control Intrinsics
-| * Compilation Limitations
+* Building DSAGEN
+* Vector Addition
+   * Hardware/Software Interface Overview
+   * Writing a Dataflow Graph
+   * Writing the Control Intrinsics
+* Vector Normalization
+   * Signaled Accumulation
+   * Concurrent DFG's
+   * Additional Control Intrinsics
+* Compilation Limitations
 
 **5-Minute Break**
 
@@ -69,6 +72,14 @@ Docker Build
 
 Related Papers
 --------------
+
+1. V. Dadu and T. Nowatzki, “Towards general purpose acceleration by exploiting common data-dependence forms,” in 52nd MICRO, 2019.
+
+2. T. Nowatzki, V. Gangadhar, N. Ardalani, and K. Sankaralingam, “Streamdataflow acceleration,” in 44th ISCA, 2017
+
+3. J. Weng, S. Liu, V. Dadu, Z. Wang, and T. Nowatzki, “Dsagen: Synthesizing programmable spatial accelerators,” in ISCA, 2020.
+
+4. J. Weng, S. Liu, Z. Wang, V. Dadu, and T. Nowatzki, “A hybrid systolicdataflow architecture for inductive matrix algorithms,” in HPCA, 2020.
 
 .. toctree::
    :maxdepth: 1
