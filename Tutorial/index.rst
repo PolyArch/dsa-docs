@@ -73,9 +73,15 @@ Syllabus and Schedule
 
 **5-Minute Break**
 
-**Handcrafting Architectures:** [slides coming soon]
+**Handcrafting Architectures: (40 Minutes)** [slides coming soon]
 
-**Extending DSAGEN for your Own Research** [slides coming soon]
+- Generating a Bitstream from the Scheudle
+
+**5-Minute Break**
+
+**Extending DSAGEN for your Own Research (60 Minutes)** [slides coming soon]
+
+- Walkthrough of the DSAGEN Stack
 
 Installing DSA-GEN
 ------------------
@@ -89,12 +95,12 @@ Start by cloning the repository:
 .. code-block:: bash
 
    $ git clone https://github.com/PolyArch/dsa-framework.git
+   $ cd dsa-framework
 
 Then, build the docker image:
 
 .. code-block:: bash
 
-   $ cd dsa-framework
    $ docker build -t dsa-framework .
 
 Related Papers
@@ -102,7 +108,7 @@ Related Papers
 
 #. V. Dadu and T. Nowatzki, “Towards general purpose acceleration by exploiting common data-dependence forms,” in 52nd MICRO, 2019.
 #. T. Nowatzki, V. Gangadhar, N. Ardalani, and K. Sankaralingam, “Streamdataflow acceleration,” in 44th ISCA, 2017
-#. J. Weng, S. Liu, V. Dadu, Z. Wang, and T. Nowatzki, “Dsagen: Synthesizing programmable spatial accelerators,” in ISCA, 2020.
+#. J. Weng, S. Liu, V. Dadu, Z. Wang, and T. Nowatzki, “DSAGEN: Synthesizing programmable spatial accelerators,” in ISCA, 2020.
 #. J. Weng, S. Liu, Z. Wang, V. Dadu, and T. Nowatzki, “A hybrid systolicdataflow architecture for inductive matrix algorithms,” in HPCA, 2020.
 #. S. Liu, J. Weng, D. Kupsh, A. Sohrabizadeh, Z. Wang, L. Guo, J. Liu, M. Zhulin, L. Zhang, J. Cong, T. Nowatzki, "OverGen: Improving FPGA Usability through Domain-specific Overlay Generation" in 55th MICRO, 2022.
 
