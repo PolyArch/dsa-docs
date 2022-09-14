@@ -1,4 +1,4 @@
-Micro 2022 Tutorial
+MICRO 2022 Tutorial
 ================================
 
 
@@ -21,67 +21,80 @@ Tutorial Overview
 
 .. figure:: images/tutorial.svg
 
-   **Figure 1:** Synthesizing Programmable Accelerators.
+   **Figure 1:** Programmable Accelerator Synthesis.
 
-Because of the wanning benefit of transistor scaling, significant research has emerge for specialized accelerators, becuase of their promising performance and energy saving. While effective, the require intensive engineering for the hardware and software, and this efforts will be repeated when the underlying application domain shifts.
+As a reaction to the slowing of transistor scaling, significant research has emerged for specialized accelerators, because of their promise of high performance and energy savings.  While extremely effective, they require intensive engineering of hardware and software -- an effort that must be repeated when new domains arise and when algorithms change.
 
-Ideally, one will be able to generate the accelerators based on the behaviors of the applications, and where these applications can be specified in a set of stead and user-friendly programming interfaces. In other words, we require a high-level synthesis flow for programmable accelerators. Figure 1 shows the paradigm of synthesizing programmable accelerators. In this tutorial, we will present our approach for programmable accelerator along with a research framework: DSAGEN, a full-stack infrastructure includes compilation, simulation, and RTL implementaion.
+Ideally, one would be able to generate accelerators based on the behaviors and structure of target applications, and where these applications are specified in a stable and friendly programming interface.  In other words, we require the equivalent of high-level synthesis (HLS), but for programmable accelerators -- programamble accelerator synthesis. Figure 1 highlights the high-level flow of this paradigm; the compiler simultaneously analyzes multiple kernels, then performs design space exploration using modeling, and ultimately produces optimized kernels along with the accelerator RTL.
 
-The first principle of our approach is to define a useful but restricted design space. Specifically we use decoupled-spatial accelerators, where memory accesses are decoupled from computation pipelines, and the underlying hardware network/storage/timing is exposed in the ISA. The second principle is to enable a rich accelerator design space by specifying architectures as a composition of simple primitives, including memories, processing elements, and network/synchronization components. An architecture instance can be represented as graph – the architecture description graph (ADG) – where each node is a hardware primitive. The ADG is an abstraction for the compiler (it is used to derive the ISA) as well as RTL generation.
+The challenges with this paradigm include: How to represent a useful design space, that is broad, easily searchable, and enables significant specialization? How to compile programs from a general language without hindering specialization benefits? How to search this design space efficiently?
 
-**DSAGEN Framework:** This approach is embodied in our framework, DSAGEN, which is overviewed in Figure 2. DSAGEN targets C programs with custom, but application neutral pragmas. The compiler infrastructure uses Clang and LLVM as a frontend, and ultimately represents programs as a decoupled dataflow graph + memory streams. A low-level assembly-level interface is provided for ninja programmers. We include a custom spatial-architecture compiler and backend. The hardware design space includes many spatial architecture optimizations from prior works [1]–[4]. The compiler backend generates programs embedded in a RISCV ISA for control. DSAGEN supports multicore simulationi in gem5, and it uses Chisel for hardware generation.
+In this tutorial, we will present one such approach for programmable accelerator synthesis, along with a corresponding framework: **DSAGEN**, a research infrastructure including compilation, simulation and RTL implementation.  
 
 Syllabus and Schedule
 ---------------------
 
-.. figure:: images/figure.svg
+.. figure:: images/stack.pdf
 
-   **Figure 2:** An Overview of the DSAGEN Stack.
+   **Figure 2:** The framework stack of DSAGEN.
 
 .. download link :download:`slides<slides/tutorial-intro.pptx>`
 
-**Introduction (20 Minutes):** [slides coming soon]
+**Introduction (30 Minutes):** [slides coming soon]
 
-- Introduction to Decoupled-Spatial Accelerators
-- DSAGEN: A Framework for Decoupled-Spatial Accelerator Research
+- The Decoupled-Spatial Programming Paradigm
+- Composing Hardware with Essential Primatives
+- The DSAGEN Framework Stack
+
+**Basic Programming (60 Minutes):** [slides coming soon]
+
+- Introduction to the Automated Compilation flow
+
+   + Annotating Programs with Pragmas
+   + Pragma parsing in *clang* and how *llvm* passes interpret to encode data accesses
+   + Spatial Mapper Algorithm overview for Decoupled Compuation and Visualization
+   + Generating Assembly Code and linking with *gnu-riscv-gcc*
+   - Simulating RISC-V binary with gem5
+
+- Hands-on exercises:
+
+   + Change pragma as different compiler transformations
+   + Visualize the difference of spatial mapping 
+   + Simulate RISC-V binary on gem5 simulator to show performance difference
 
 
-**Basic Programming (40 Minutes):** [slides coming soon]
+**10-Minute Break**
 
-- Building DSAGEN
-- Vector Addition
+**Build your own Domain-specific Accelerator (60 Minutes):** [slides coming soon]
 
-   + Hardware/Software Interface Overview
-   + Writing a Dataflow Graph
-   + Writing the Control Intrinsics
+- Introducing the concept of Architecture Description Graph (ADG)
 
-- Vector Normalization
+   + Design-space and micro-architecture DSA
+   + Exporting designs as ADG and simulating RISC-V binary on RTL-level
+   + Analytical Power/Performance/Area modeling
 
-   + Signaled Accumulation
-   + Concurrent DFG's
-   + Additional Control Intrinsics
+- Hands-on exercises:
 
-- Compilation Limitations
+   + Compose a larger ADG with new operation and different topology by DSL
+   + Visualize the difference of ADG and spatial mapping
+   + Showing difference of estimated power/performance/area on different hardware designs
+   + Performance analysis on how hardware feature affect performance and hardware consumption
 
-**5-Minute Break**
+**10-Minute Break**
 
-**Design-Space Exploartion (40 Minutes):** [slides coming soon]
+**Automatic Design Space Exploration: (40 Minutes)** [slides coming soon]
 
-- Generating Workload Sets to Optimize
-- Automatically Optimize Accelerators using the Design Space Explorer
-- Visualizing Optimized Accelerator Designs
+- Introduction to the Design Space Explorer
+   
+      + An end-to-end flow from a set of programs to auto-generated accelerators
+      + Introducing DSE to achieve better Power/Performance/Area
+      + Key DSE-specific techniques
 
-**5-Minute Break**
-
-**Handcrafting Architectures: (40 Minutes)** [slides coming soon]
-
-- Generating a Bitstream from the Scheudle
-
-**5-Minute Break**
-
-**Extending DSAGEN for your Own Research (60 Minutes)** [slides coming soon]
-
-- Walkthrough of the DSAGEN Stack
+- Hands-on exercises:
+   
+      + Perform DSE on a small set of kernels
+      + Measure performance on generated accelerator
+      + Visualize the DSE process and generated accelerator designs
 
 Installing DSA-GEN
 ------------------
