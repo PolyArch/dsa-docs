@@ -54,7 +54,7 @@ Syllabus and Schedule
    + Pragma parsing in *clang* and how *llvm* passes interpret to encode data accesses
    + Spatial Mapper Algorithm overview for Decoupled Compuation and Visualization
    + Generating Assembly Code and linking with *gnu-riscv-gcc*
-   - Simulating RISC-V binary with gem5
+   + Simulating RISC-V binary with gem5
 
 - Hands-on exercises:
 
