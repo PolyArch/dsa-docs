@@ -5,10 +5,10 @@ Micro 2022 Tutorial
 Organizers
 ----------
 
-`Jian Weng`_, `Sihao Liu`_, `Dylan Kupsh`_, `Tony Nowatzki`_
-`PolyArch Research Group`_.
-University of California, Los Angeles
-Date/Time: Sunday October 2nd, 1:00pm - 5:00pm CDT
+| `Jian Weng`_, `Sihao Liu`_, `Dylan Kupsh`_, `Tony Nowatzki`_
+| `PolyArch Research Group`_.
+| University of California, Los Angeles
+| Date/Time: Sunday October 2nd, 1:00pm - 5:00pm CDT
 
 .. _Jian Weng: http://were.github.io/
 .. _Sihao Liu: http://web.cs.ucla.edu/~sihao/
@@ -39,23 +39,24 @@ Syllabus and Schedule
 
 **Basic Programming (40 Minutes):** [slides] (coming soon)
 
-* Building DSAGEN
-* Vector Addition
-   * Hardware/Software Interface Overview
-   * Writing a Dataflow Graph
-   * Writing the Control Intrinsics
-* Vector Normalization
-   * Signaled Accumulation
-   * Concurrent DFG's
-   * Additional Control Intrinsics
-* Compilation Limitations
+| * Building DSAGEN
+| * Vector Addition
+|    * Hardware/Software Interface Overview
+|    * Writing a Dataflow Graph
+|    * Writing the Control Intrinsics
+| * Vector Normalization
+|    * Signaled Accumulation
+|    * Concurrent DFG's
+|    * Additional Control Intrinsics
+| * Compilation Limitations
 
-5-Minute Break
+**5-Minute Break**
 
 **Design-Space Exploartion (40 Minutes):** [slides] (coming soon)
+
 * Automatically Optimizing Accelerator using the Design Space Explorer
 
-5-Minute Break
+**5-Minute Break**
 
 **Handcrafting Architectures:** [slides] (coming soon)
 
