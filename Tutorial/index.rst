@@ -120,7 +120,7 @@ Then, build the docker image:
 Related Papers
 --------------
 
-#. S. Liu, J. Weng, D. Kupsh, A. Sohrabizadeh, Z. Wang, L. Guo, J. Liu, M. Zhulin, L. Zhang, J. Cong, T. Nowatzki, "OverGen: Improving FPGA Usability through Domain-specific Overlay Generation" in MICRO, 2022. [`paper <https://polyarch.cs.ucla.edu/papers/micro2022-overgen.pdf>`_][`cite <https://scholar.googleusercontent.com/scholar.bib?q=info:DxhlNcj5YDwJ:scholar.google.com/&output=citation&scisdr=CgUCzS1sEJuAhLd0mcY:AAGBfm0AAAAAYyJygcYnLhlbuRbkcUdAArsN00EsWg99&scisig=AAGBfm0AAAAAYyJygWDn2OzNUlBx_QYKoO8jJeEJ-GYi&scisf=4&ct=citation&cd=-1&hl=en>`_]
+#. S. Liu, J. Weng, D. Kupsh, A. Sohrabizadeh, Z. Wang, L. Guo, J. Liu, M. Zhulin, L. Zhang, J. Cong, T. Nowatzki, "OverGen: Improving FPGA Usability through Domain-specific Overlay Generation" in MICRO, 2022. [`paper <https://polyarch.cs.ucla.edu/papers/micro2022-overgen.pdf>`_][`cite <cites/overgen.bib>`_]
 #. J. Weng, S. Liu, V. Dadu, Z. Wang, and T. Nowatzki, “DSAGEN: Synthesizing programmable spatial accelerators” in ISCA, 2020.
 #. J. Weng, S. Liu, Z. Wang, V. Dadu, and T. Nowatzki, “A hybrid systolicdataflow architecture for inductive matrix algorithms” in HPCA, 2020.
 #. V. Dadu and T. Nowatzki, “Towards general purpose acceleration by exploiting common data-dependence forms” in 52nd MICRO, 2019.
