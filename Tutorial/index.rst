@@ -120,7 +120,7 @@ Then, build the docker image:
 Related Papers
 --------------
 
-#. S. Liu, J. Weng, D. Kupsh, A. Sohrabizadeh, Z. Wang, L. Guo, J. Liu, M. Zhulin, L. Zhang, J. Cong, T. Nowatzki, "OverGen: Improving FPGA Usability through Domain-specific Overlay Generation" in MICRO, 2022. [`paper <https://polyarch.cs.ucla.edu/papers/micro2022-overgen.pdf>`_][`cite <cites/overgen.bib>`_]
+#. S. Liu, J. Weng, D. Kupsh, A. Sohrabizadeh, Z. Wang, L. Guo, J. Liu, M. Zhulin, L. Zhang, J. Cong, T. Nowatzki, "OverGen: Improving FPGA Usability through Domain-specific Overlay Generation" in MICRO, 2022. [`paper <https://polyarch.cs.ucla.edu/papers/micro2022-overgen.pdf>`_][:download:`cite <cites/overgen.bib>`]
 #. J. Weng, S. Liu, V. Dadu, Z. Wang, and T. Nowatzki, “DSAGEN: Synthesizing programmable spatial accelerators” in ISCA, 2020.
 #. J. Weng, S. Liu, Z. Wang, V. Dadu, and T. Nowatzki, “A hybrid systolicdataflow architecture for inductive matrix algorithms” in HPCA, 2020.
 #. V. Dadu and T. Nowatzki, “Towards general purpose acceleration by exploiting common data-dependence forms” in 52nd MICRO, 2019.
