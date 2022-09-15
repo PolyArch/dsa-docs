@@ -13,7 +13,10 @@
 # import os
 # import sys
 # sys.path.insert(0, os.path.abspath('.'))
+import subprocess, os
 
+# Doxygen
+subprocess.call('doxygen Doxyfile.in', shell=True)
 
 # -- Project information -----------------------------------------------------
 
@@ -38,7 +41,8 @@ extensions = [
     'sphinx.ext.ifconfig',
     'sphinx.ext.viewcode',
     'sphinx.ext.githubpages',
-    'sphinx.ext.autosectionlabel'
+    'sphinx.ext.autosectionlabel',
+    'breathe'
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -63,3 +67,11 @@ html_theme = 'sphinx_rtd_theme'
 html_static_path = ['_static']
 
 master_doc = 'index'
+
+# -- Breathe configuration -------------------------------------------------
+
+breathe_projects = {
+	"dsa-scheduler": "_build/xml/"
+}
+breathe_default_project = "dsa-scheduler"
+breathe_default_members = ('members', 'undoc-members')

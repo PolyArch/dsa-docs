@@ -37,6 +37,8 @@ generation.
 
    Workloads/index
 
+   API/index
+
 
 Indices and tables
 ==================
