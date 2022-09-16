@@ -21,9 +21,7 @@ The DSE algorithm is described within Figure 1. The algorithm works in several s
 
 #. Stochastic Selection
 
-   Finally, the scheduler determines a new schedule according to 
-
-
+   Finally, the dse stocastically chooses a new adg design based upon overall performance and single-core area. The DSE uses iteration number and temperature to determine probability of choosing a new design.
 
 
 .. toctree::

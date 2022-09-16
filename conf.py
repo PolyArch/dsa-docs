@@ -71,7 +71,7 @@ master_doc = 'index'
 # -- Breathe configuration -------------------------------------------------
 
 breathe_projects = {
-	"dsa-scheduler": "_build/scheduler/xml/",
+	"dsa-scheduler": "_build/xml/",
 }
 breathe_default_project = "dsa-scheduler"
 breathe_default_members = ('members', 'undoc-members')
