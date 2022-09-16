@@ -6,3 +6,6 @@ spatial architectures.
 
 .. toctree::
    :maxdepth: 2
+
+   usage
+   algorithm

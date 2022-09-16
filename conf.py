@@ -16,7 +16,7 @@
 import subprocess, os
 
 # Doxygen
-subprocess.call('doxygen Doxyfile.in', shell=True)
+subprocess.call('doxygen Doxyfile.scheduler.in', shell=True)
 
 # -- Project information -----------------------------------------------------
 
@@ -34,7 +34,7 @@ release = ''
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-'sphinx.ext.autodoc',
+    'sphinx.ext.autodoc',
     'sphinx.ext.intersphinx',
     'sphinx.ext.todo',
     'sphinx.ext.mathjax',
@@ -71,7 +71,7 @@ master_doc = 'index'
 # -- Breathe configuration -------------------------------------------------
 
 breathe_projects = {
-	"dsa-scheduler": "_build/xml/"
+	"dsa-scheduler": "_build/scheduler/xml/",
 }
 breathe_default_project = "dsa-scheduler"
 breathe_default_members = ('members', 'undoc-members')
