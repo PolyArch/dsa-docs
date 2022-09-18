@@ -4,53 +4,33 @@ Setup
 Prerequisites
 -------------
 
-Packages
-~~~~~~~~
+We highly recommend you use `Docker <https://docs.docker.com/desktop/install/linux-install/>`__ to setup
+the environment. By downloading this `Dockerfile <./Dockerfile>`, you can simply setup the environment
+by typing
 
 ::
+     $ sudo docker build .
 
-    $ sudo apt-get install autoconf automake autotools-dev curl libmpc-dev libmpfr-dev        \
-                           libgmp-dev gawk build-essential bison flex texinfo gperf libtool   \
-                           patchutils bc qt4-dev-tools libqt4-dev python-dev scons flex bison \
-                           libgoogle-perftools-dev python-six libssl-dev zlib1g-dev
 
-Misc
-~~~~
-
-CMake 3.12 is required. You can go to `CMake official
-page <https://cmake.org/download/>`__ to get the latest one.
-
-Python hex package is required for riscv-opcode. It seems to be a
-default package from
-`Anaconda <https://www.anaconda.com/products/individual>`__.
-
-Build the Stack
----------------
-
-Build the decoupled-spatial architecture stack from the source.
+Or, more aggressively, you can build the image and start the container with one command
 
 ::
+     $ sudo docker run -tid --privileged=true --hostname=og --name=og \
+         `sudo docker build . | tail -1 | awk '{ print $3 }'` /usr/bin/zsh
 
-    $ git clone --recursive [this repo]
-    $ source setup.sh
-    $ source $HOME/anaconda/bin/activate
-    $ make
+`zsh <https://www.zsh.org/>`__ is required because the behaviors of our environement setup script
+will change if we use the default bash.
 
-Run an Example
---------------
 
-Run a manually programmed example:
+Build
+-----
 
-::
-
-    cd ss-workloads/dsp-benchmarks/gemm
-    make sb-new.log
-
-Run a compiled example:
+Our docker only resolves all the dependences, and clone the repos. Therefore, after the docker
+container starts, you should build the framework infrastructures from the source code:
 
 ::
-
-    cd ss-workloads/Compilation/MachSuite/
-    ./run.sh opt-ss-gemm.out
-
+      $ cd dsa-framework
+      $ source setup.sh # setup environement variables
+      $ make all
+      $ source setup.sh # soruce it again after building
 
