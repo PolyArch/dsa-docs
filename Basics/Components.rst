@@ -1,67 +1,49 @@
 DSAGEN Components
 ===============================
 
+Software Stack
+---------------------
+In term of functionality, the compilation of decoupled-spatial architecture can be separated into two aspects,
+host control command, and spatial mapping. We develop a spatial scheduler to map the dataflow graph onto
+the spatial architecture, and this is available in repo **spatial-scheduler**. Refer [placeholder] for more
+details on the spatial architecture programming interface and mapping.
 
-Spatial Scheduling Libraries
--------------------------------------------
-**config library**
-  The configuration library contains mechanisms to specify a design
-  space of DSA architectures.  
+In term of programming interface, we expose both manually embedded assembly code, and high-level language 
+programming interface. We use RISCV toolchains to extend the ISA encoding for our decoupled-spatial architecture.
+The ISA encoding patch as well as the macro intrinsics are available in repo **dsa-riscv-ext**.
+The patch will be applied on **riscv-gnu-toolchain** (as a part of our **chipyard** repo). We use riscv-gnu-toolchain
+for binary generation.
 
-**scheduling library**
-  The scheduling library provides a way to specify dataflow graphs, as well
-  as tools to map these graphs onto the DSA architecture configuration. 
+In order to provide a productive programming interface, we define pragma hints (refer [placeholder] for more
+detials). We extend the Clang frontend to parse and encode these pragmas, and we implement an LLVM pass to
+take advantage of this additional information and transform the program into the decoupled-spatial ISA. All
+these are available in repo **llvm-project**.
 
-Simulation
--------------------------------------------
-**ssim**
-  ssim is a cycle-level simulator of a decoupled-spatial accelerator.  
 
-**gem5**
-  gem5 is a modular platform for computer-system architecture research, encompassing system-level architecture as well as processor microarchitecture.
-  ssim is embedded within gem5, currently supporting integration with the inorder core (minor).
+Workloads
+---------
 
-Associated Workloads
--------------------------------------------
-
-External Suites
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+We have three benchmark suites implemented for demonstration.
 
 **MachSuite:**
-  `Machsuite <http://breagen.github.io/MachSuite/>`__ is a benchmark suite intended for accelerator-centric research.  A subset of workloads are implemented, both with manual and automatically compiled versions.
+  `Machsuite <http://breagen.github.io/MachSuite/>`__ is a benchmark suite intended for accelerator-centric research.  A subset of workloads are implemented.
 
-**PolyBench:**
-  `PolyBench <https://github.com/bollu/polybench-c>`__ is a collection of simple benchmarks containing static control parts, primarily used for testing the compiler.
+**DSP:**
+  Digital signal processing (DSP) is a benchmark suite from our prior work `REVEL <http://https://ieeexplore.ieee.org/document/9065593>`__ for applications with moderate irregularity and imbalanced execution frequency within loop bodies.
 
-Internal Suites
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-**DianNao:**
-  Simple single-threaded convolution/pooling/classification kernels from `DianNao <https://doi.org/10.1145/2644865.2541967>`__ research paper.
+**Xilinx Vision:**
+  `Xilinx Vitis <https://github.com/Xilinx/Vitis_Libraries>`__ is a benchmark suite for HLS demonstration. We select a subset
+  of workloads to target.
 
-**DSP:** 
-  Digital signal processing workloads adapted from the `REVEL <https://doi.org/10.1109/HPCA47549.2020.00063>`__ work.
+To develop your own applications, we also provide SDKs for both manual and high-level programming (refer [placeholder] for more details).
 
-**Tests:** 
-  Unit tests to verify the functionality of each module.
+Functional Simulation
+---------------------
+Our framework extends gem5 by integrating a spatial architecture simulator to simulate the functionality and model the performance
+of our decoupled-spatial architecture.
 
-Toolchains
--------------------------------------------
-
-**riscv-tools**
-  A collection of software toolchains used to develop and execute software on the RISC-V ISA.
-  
-  This toolchain is largely unmodified, except for the assembler which can handle control instructions
-  from the stream-ISA.
-
-  Stream-Dataflow programs can be written in assembly, and compiled purely with the GNU riscv toolchain
-  and spatial scheduler without need for the LLVM-based compiler.
-    
-**LLVM and Clang**
-  LLVM is a collection of modular and reusable compiler and toolchain technologies.  Clang is
-  a C language frontend for LLVM. 
  
-  These tools are used for generating stream-dataflow programs from C-based source code with
-  pragmas.
-
-
+RTL Generation and Simulation
+-----------------------------
+@Sihao
