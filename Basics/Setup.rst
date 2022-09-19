@@ -5,8 +5,8 @@ Prerequisites
 -------------
 
 We highly recommend you use `Docker <https://docs.docker.com/desktop/install/linux-install/>`__ to setup
-the environment. By downloading this `Dockerfile <./Dockerfile>`__, you can simply setup the environment
-by typing
+the environment. By downloading this `Dockerfile <https://github.com/PolyArch/dsa-framework/blob/micro-tutorial/Dockerfile>`__,
+you can simply setup the environment by typing
 
 .. code-block:: shell
 
@@ -20,8 +20,8 @@ Or, more aggressively, you can build the image and start the container with one 
      $ sudo docker run -tid --privileged=true --hostname=og --name=og \
          `sudo docker build . | tail -1 | awk '{ print $3 }'` /usr/bin/zsh
 
-`zsh <https://www.zsh.org/>`__ is required because the behaviors of our environement setup script
-will change if we use the default bash.
+NOTE: `zsh <https://www.zsh.org/>`__ is required. If we use the default bash,
+the behaviors of our environement setup script are undesired.
 
 
 Build

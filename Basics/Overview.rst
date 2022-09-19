@@ -1,13 +1,18 @@
 Overview
-===============================
+========
 
-DSAGEN is a research infrastructure for studying programmable accelerators from the perspective of programming, ISAs, microarchitecture, and scaling.
+DSAGEN [#]_ is a research infrastructure for studying programmable accelerators
+from the perspective of programming, ISAs, microarchitecture, and scaling.
 
-The basic idea is that one can specify an accelerator as a graph, out of simple
-primitives like networks, processing elements, memory, and synchronoization.
-We call this an architecture description graph (ADG).  A compiler will lower
-code written in either in some language (either C+Pragmas or low-level assembly
-for now) to the ADG in question.  The compiler will take care of figuring out
+The principle of this framework is that spatial accelerators can be representend
+as a graph of simple primitives like network switches, processing elements,
+memory, and synchronoization.
+We call this an architecture description graph (ADG).
+This graph is used not only as a specification of the underlying hardware
+but also an abstraction to the compiler.
+The compiler parses the ADG, and map the program 
+(either C+Pragmas or low-level assembly for now) to the hardware.
+The compiler will take care of figuring out
 the bitstream format based on the components of the ADG.  Finally, optimized
 kernels are produced as output, composed of control code and the accelerator
 bitstream.  We use a control code to sequence through the accelerator phases,
@@ -21,6 +26,9 @@ What design space does DSAGEN target?
   operations are also exposed to the ISA.  By "decoupled" we refer to designs
   which seprate memory pipelines from computation pipelines, so that each can have
   their own specialized primitives. [#]_
+
+
+TODO(@Jian Weng): Put a figure of mapping program to decoupled-spatial here.
 
 
 What can DSAGEN be useful for?
@@ -46,6 +54,7 @@ What can DSAGEN be useful for?
   * It is our end-goal to be able to deliver reliable hardware generation, although the
     infrastructure is in the very early stages of being able to supply that. [#]_ 
 
+.. [#] DSAGEN can be both used as both Domain-Specific Accelerator Generator and Decoupled Spatial Architecture Generator.
 
 .. [#] In practice, the lines between memory and computation are blurred, as some memory 
        streams embed computation, and sometimes we are computing an address.  The principle
