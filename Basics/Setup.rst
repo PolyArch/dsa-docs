@@ -5,7 +5,7 @@ Prerequisites
 -------------
 
 We highly recommend you use `Docker <https://docs.docker.com/desktop/install/linux-install/>`__ to setup
-the environment. By downloading this `Dockerfile <./Dockerfile>`, you can simply setup the environment
+the environment. By downloading this `Dockerfile <./Dockerfile>`__, you can simply setup the environment
 by typing
 
 .. code-block:: shell
