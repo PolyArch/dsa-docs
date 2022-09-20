@@ -5,6 +5,7 @@ This section gives you a quick tour to RISC-V ISA format and slots so that
 the basic sense and implementation of extending the RISC-V ISA are covered.
 
 These external links are involved, refer them for more details:
+
  * `The RISC-V Instruction Set Manual <https://riscv.org/wp-content/uploads/2019/12/riscv-spec-20191213.pdf>`__
  * `risc-v opcode <https://github.com/riscv/riscv-opcodes>`__
  * `RISC-V GNU Compiler Toolchain <https://github.com/riscv/riscv-gnu-toolchain>`__
@@ -37,9 +38,9 @@ Both the figure and the text description are little endian format.
 
       addi    rd rs1 imm12           14..12=7 6..2=0x04 1..0=3
 
-`rd`, `rs1`, and `imm12` describe the operands of this instruction; `14..12` describes `funct3`;
-`6..2` describes the opcode. According to Table 24.1 on page 129 (no page number on the PDF),
-the first two bits are always `11`.
+``rd``, ``rs1``, and ``imm12`` describe the operands of this instruction; ``14..12`` describes ``funct3``;
+``6..2`` describes the opcode. According to Table 24.1 on page 129 (no page number on the PDF),
+the first two bits are always ``11``.
 
 For more information on the operand tokens appear in this file, refer to
 `this <https://github.com/riscv/riscv-opcodes/blob/03be826f17faedcaee7f60223f402850e254df0a/parse_opcodes#L17-L49>`__
@@ -92,9 +93,10 @@ related to customized opcodes by the extended encoding.
 In `risc-v opcodes <https://github.com/riscv/riscv-opcodes>`__, scripts are provided to generate these encoding
 codes. Use the following command:
 
-```bash
-cat opcodes-custom | ./parse-opcode -c > snippet
-```
+
+.. code-block:: shell
+
+    cat opcodes-custom | ./parse-opcode -c > snippet
 
 Edit `opcodes-custom` to name the extended instructions, and define the operands.
 
@@ -114,9 +116,9 @@ The meaning of each column is:
 * The module of the instruction belongs to; here I suggest just give "I", the most basic module;
 * The operand description; there is no document for the meaning of each letter, but you can refer to
   `this git issue <https://github.com/riscv/riscv-binutils-gdb/issues/243>`__ and read the source code for more 
-  details; typically, knowing `s`, `t`, `j`, `d`, and `q` are enough;
-* For instructions without aliasing and pesudo representation, the next two columns can just give the `MASK_*` 
-  and `MATCH_*` generated in `snippet`.
+  details; typically, knowing ``s``, ``t``, ``j``, ``d``, and ``q`` are enough;
+* For instructions without aliasing and pesudo representation, the next two columns can just give the ``MASK_*`` 
+  and ``MATCH_*`` generated in ``snippet``.
 * I believe it should be something about the aliasing and pseudo thing too, and giving `0` should also suffice.
 
 Implementation
