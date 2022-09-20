@@ -1,20 +1,20 @@
-RISC-V ISA
-==========
+Extending RISC-V ISA
+====================
 
 This section gives you a quick tour to RISC-V ISA format and slots so that
 the basic sense and implementation of extending the RISC-V ISA are covered.
 
 These external links are involved, refer them for more details:
- * [The RISC-V Instruction Set Manual](https://riscv.org/wp-content/uploads/2019/12/riscv-spec-20191213.pdf)
- * [risc-v opcodes](https://github.com/riscv/riscv-opcodes)
- * [RISC-V GNU Compiler Toolchain](https://github.com/riscv/riscv-gnu-toolchain)
+ * `The RISC-V Instruction Set Manual<https://riscv.org/wp-content/uploads/2019/12/riscv-spec-20191213.pdf>`__
+ * `risc-v opcodes`<https://github.com/riscv/riscv-opcodes>`__
+ * `RISC-V GNU Compiler Toolchain`<https://github.com/riscv/riscv-gnu-toolchain>`__
 
 Instruction Format
 ------------------
 
 All the RISCV instructions are 32-bit vectors.
 Please refer page 130 (# on the upper right of each page, not PDF reader page) of the
-[RISC-V manual](https://riscv.org/wp-content/uploads/2019/12/riscv-spec-20191213.pdf)
+`RISC-V manual<https://riscv.org/wp-content/uploads/2019/12/riscv-spec-20191213.pdf>`__
 for the format of these vectors.
 
 To choose a proper format for your extended instruction, the number of src/dst
@@ -29,7 +29,7 @@ by the opcode; 3 bits are occupied for `funct3`; each register occupies 5 bits
 The instruction format are described in the [risc-v opcodes](https://github.com/riscv/riscv-opcodes)
 repo, and you can open `opcodes-rv32i`, the most basic module of the RISC-V ISA,
 for examples. To understand this file, we use
-[addi](https://github.com/riscv/riscv-opcodes/blob/03be826f17faedcaee7f60223f402850e254df0a/opcodes-rv32i#L24)
+`addi<https://github.com/riscv/riscv-opcodes/blob/03be826f17faedcaee7f60223f402850e254df0a/opcodes-rv32i#L24>`__
 instruction as an example, and a correspondence to the `ADDI` row in page 130 can be made.
 Both the figure and the text description are little endian format.
 
@@ -42,7 +42,7 @@ Both the figure and the text description are little endian format.
 the first two bits are always `11`.
 
 For more information on the operand tokens appear in this file, refer to
-[this](https://github.com/riscv/riscv-opcodes/blob/03be826f17faedcaee7f60223f402850e254df0a/parse_opcodes#L17-L49)
+`this<https://github.com/riscv/riscv-opcodes/blob/03be826f17faedcaee7f60223f402850e254df0a/parse_opcodes#L17-L49>`__
 for more details. This Python dict declares the bit range this token occupies.
 The semantics of each token id can be understood by knowing their bit range,
 acompanied with the figure of the instruction format.
@@ -57,7 +57,7 @@ To understand the constraints of extending new instructions, we need to know:
 Refer custom-0/1/2/3 cells in Table 24.1 on page 129. These four slots are reserved
 for instruction extension.
 
-Refer [this file](https://github.com/riscv/riscv-opcodes/blob/master/opcodes-custom)
+Refer `this file<https://github.com/riscv/riscv-opcodes/blob/master/opcodes-custom>`__
 for the operand constraints of each instruction. The operand signature of each instruction should
 be exactly the same as their corresponding slot in custom.
 
@@ -82,11 +82,11 @@ Binary Encoding
 ---------------
 
 To integrate the binary encoding of the extended instruction, we want to replace the code segments
-([1](https://github.com/riscv/riscv-binutils-gdb/blob/2cb5c79dad39dd438fb0f7372ac04cf5aa2a7db7/include/opcode/riscv-opc.h#L550-L597),
-[2](https://github.com/riscv/riscv-binutils-gdb/blob/2cb5c79dad39dd438fb0f7372ac04cf5aa2a7db7/include/opcode/riscv-opc.h#L1106-L1129))
+`1<https://github.com/riscv/riscv-binutils-gdb/blob/2cb5c79dad39dd438fb0f7372ac04cf5aa2a7db7/include/opcode/riscv-opc.h#L550-L597>`__,
+`2<https://github.com/riscv/riscv-binutils-gdb/blob/2cb5c79dad39dd438fb0f7372ac04cf5aa2a7db7/include/opcode/riscv-opc.h#L1106-L1129>`__
 related to customized opcodes by the extended encoding.
 
-In [risc-v opcodes](https://github.com/riscv/riscv-opcodes), scripts are provided to generate these encoding
+In `risc-v opcodes<https://github.com/riscv/riscv-opcodes>`__, scripts are provided to generate these encoding
 codes. Use the following command:
 
 ```bash
@@ -102,7 +102,8 @@ Copy those lines and use them to replace the code segments mentioned above.
 ### Mnemonic Format
 
 To integrate the mnemonic (text) format of the extended instruction, we want to add additional rules below
-[this line](https://github.com/riscv/riscv-binutils-gdb/blob/2cb5c79dad39dd438fb0f7372ac04cf5aa2a7db7/opcodes/riscv-opc.c#L199). The meaning of each column is:
+`this line<https://github.com/riscv/riscv-binutils-gdb/blob/2cb5c79dad39dd438fb0f7372ac04cf5aa2a7db7/opcodes/riscv-opc.c#L199>`__.
+The meaning of each column is:
 * Name string;
 * The default data width; zero means the same as machine bits; here I suggest to give 0;
 * The module of the instruction belongs to; here I suggest just give "I", the most basic module;
@@ -124,9 +125,9 @@ patch is applied. A autopatcher helps:
 2. To unify the code hacking interface on both GNU and LLVM;
 3. To automate the whole process of code modification by avoiding copy-and-pase, which is error prone.
 
-Refer to [isa.ext](https://github.com/PolyArch/dsa-riscv-ext/blob/master/isa.ext), I have a text format to
+Refer to `isa.ext<https://github.com/PolyArch/dsa-riscv-ext/blob/master/isa.ext>`__, I have a text format to
 describe how the extended instructions look like. Then refer to the
-[Makefile](https://github.com/PolyArch/dsa-riscv-ext/blob/master/Makefile) and
-[auto-patch.py](https://github.com/PolyArch/dsa-riscv-ext/blob/master/auto-patch.py)
+`Makefile<https://github.com/PolyArch/dsa-riscv-ext/blob/master/Makefile>`__ and
+`auto-patch.py<https://github.com/PolyArch/dsa-riscv-ext/blob/master/auto-patch.py>`__
 for how the involved files are modified to integrate the extended instructions.
 
