@@ -3,12 +3,12 @@ SDK Walkthrough
 
 This section explains our software development kit, which allows
 users to rapidly start writing your own applications. Please refer to
-`this repo<https://github.com/PolyArch/dsa-apps/tree/polyarch/sdk>`__.
+`this repo <https://github.com/PolyArch/dsa-apps/tree/polyarch/sdk>`__.
 
 Automated Compilation
 ---------------------
 
-In the example `vecadd<https://github.com/PolyArch/dsa-apps/blob/polyarch/sdk/compiled/vecadd.c>`__,
+In the example `vecadd <https://github.com/PolyArch/dsa-apps/blob/polyarch/sdk/compiled/vecadd.c>`__,
 by simply typing the command below, the generated binaries can be simulated in Gem5. 
 
 .. code-block:: shell
@@ -41,8 +41,8 @@ To explain the build infrastructures, we overview the flow of compilation:
 
 1. The kernel file is first parsed by our extended `clang` and generate an LLVM IR file (see `vecadd.ll`).
 2. This IR file is fed to an LLVM pass for decoupled-spatial transformation.
-    - The decoupled memory access are encoded in control commands and embedded in the host assemly code (see `ss-vecadd.ll`).
-    - The decoupled computation are in dfg file(s) (see `vecadd_%.dfg` where % is the unrolling degree).
+    1. The decoupled memory access are encoded in control commands and embedded in the host assemly code (see `ss-vecadd.ll`).
+    2. The decoupled computation are in dfg file(s) (see `vecadd_%.dfg` where % is the unrolling degree).
 3. The transformed IR is fed to LLVM code generator to generate assembly code (see `ss-vecadd.s`).
 4. The generated assembly code will be fed to riscv-gnu linker to generate the binaries (see `ss-vecadd.out`).
 
