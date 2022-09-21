@@ -19,13 +19,13 @@ The explanation is separated into two aspects, the programming interfaces, and t
 To explain the programming interfaces, we provide a set unified interfaces (in this case, declared in
 ``common/interface.h`` and implemented in ``vecadd.c``) for you to write application kernels and model its performance.
 
-- ``struct Arguments`` are the input of the benchmark kernel, which will be initialized by ``init_data`` and
+  * ``struct Arguments`` are the input of the benchmark kernel, which will be initialized by ``init_data`` and
   used as input argument of ``run_*``.
-- ``init_data`` initializes the input of application. We provide several convinence function macros in ``common/test.h``
+  * ``init_data`` initializes the input of application. We provide several convinence function macros in ``common/test.h``
   to initialize the data.
-- ``run_reference`` is the function invoke the host execution for a golden reference of the application result.
-- ``run_accelerator`` is the function to invoke the accelerator. The ``is_warmup`` indicates if it is cache warmup invocation.
-- ``sanity_check`` verifies the result of compilation. We provide several convinence function macros in ``common/test.h``
+  * ``run_reference`` is the function invoke the host execution for a golden reference of the application result.
+  * ``run_accelerator`` is the function to invoke the accelerator. The ``is_warmup`` indicates if it is cache warmup invocation.
+  * ``sanity_check`` verifies the result of compilation. We provide several convinence function macros in ``common/test.h``
   to check the result correctness.
 
 Feel free to copy and rename ``vecadd.c`` and write other kernels and use the following command to simulate.
