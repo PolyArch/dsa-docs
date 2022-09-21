@@ -8,6 +8,6 @@ spatial architectures.
 .. toctree::
    :maxdepth: 2
 
-   SDKWalkthrough
    CCompiler
+   SDKWalkthrough
    EmbeddedASMDFG
