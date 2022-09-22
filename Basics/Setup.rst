@@ -6,18 +6,24 @@ Prerequisites
 
 We highly recommend you use `Docker <https://docs.docker.com/desktop/install/linux-install/>`__ to setup
 the environment. By downloading this `Dockerfile <https://github.com/PolyArch/dsa-framework/blob/micro-tutorial/Dockerfile>`__,
-you can simply setup the environment by typing
+you can simply setup the environment by typing to build a docker image:
 
 .. code-block:: shell
 
-     $ sudo docker build .
+     $ sudo docker build . -t polyarch/dsa-framework:latest
+
+Then you can start a docker container by typing:
+
+.. code-block:: shell
+
+        $ sudo docker run -tid --name=overgen polyarch/dsa-framework:latest /usr/bin/zsh
 
 
 Or, more aggressively, you can build the image and start the container with one command
 
 .. code-block:: shell
 
-     $ sudo docker run -tid --privileged=true --hostname=og --name=og \
+     $ sudo docker run -tid --hostname=overgen --name=overgen \
          `sudo docker build . | tail -1 | awk '{ print $3 }'` /usr/bin/zsh
 
 NOTE: `zsh <https://www.zsh.org/>`__ is required. If we use the default bash,
