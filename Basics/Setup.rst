@@ -35,5 +35,5 @@ container starts, you should build the framework infrastructures from the source
       $ cd dsa-framework
       $ source setup.sh # setup environement variables
       $ make all
-      $ source setup.sh # soruce it again after building
+      $ source chipyard/env.sh # soruce it for RISCV gnu toochains
 
