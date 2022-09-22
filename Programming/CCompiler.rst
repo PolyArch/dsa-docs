@@ -21,10 +21,8 @@ Here we extend three pragmas:
     * The ``unroll`` clause allows users to manually tune the resource occupation of the code region. If ``x=-1``, the compiler will
       automatically explore the unrolling degree.
 
-  2. ``#pragma ss stream``: This pragma annotates a loop, which indicates all the memory accesses below are restricted. This also indicates the
-    highest loop level to encode memory operations in coarse grain stream commands.
-  3. ``#pragma ss config``: This pragma annotates a compound statement, which indicates all the annotated ``dfg`` are concurrent on the
-    spatial architecture.
+  2. ``#pragma ss stream``: This pragma annotates a loop, which indicates all the memory accesses below are restricted. This also indicates the highest loop level to encode memory operations in coarse grain stream commands.
+  3. ``#pragma ss config``: This pragma annotates a compound statement, which indicates all the annotated ``dfg`` are concurrent on the spatial architecture.
 
 Automated Compilation
 ---------------------
