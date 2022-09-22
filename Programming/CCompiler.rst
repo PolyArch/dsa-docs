@@ -16,16 +16,16 @@ IR metadata.
 
 Here we extend three pragmas:
 
-  * ``#pragma ss dfg [unroll(x)]``: This pragma annotates an innermost loop or a compound statement (refer 
+  1. ``#pragma ss dfg [unroll(x)]``: This pragma annotates an innermost loop or a compound statement (refer 
     `this repo <https://github.com/PolyArch/dsa-apps/tree/polyarch/compiled/Dsp/cholesky.c>`__ for more details),
     which indicates the memory accesses and computaiton within the annotated region will be mapped to our decoupled-spatial execution.
 
     * The ``unroll`` clause allows users to manually tune the resource occupation of the code region. If ``x=-1``, the compiler will
       automatically explore the unrolling degree.
 
-  * ``#pragma ss stream``: This pragma annotates a loop, which indicates all the memory accesses below are restricted. This also indicates the
+  2. ``#pragma ss stream``: This pragma annotates a loop, which indicates all the memory accesses below are restricted. This also indicates the
     highest loop level to encode memory operations in coarse grain stream commands.
-  * ``#pragma ss config``: This pragma annotates a compound statement, which indicates all the annotated ``dfg`` are concurrent on the
+  3. ``#pragma ss config``: This pragma annotates a compound statement, which indicates all the annotated ``dfg`` are concurrent on the
     spatial architecture.
 
 Automated Compilation
