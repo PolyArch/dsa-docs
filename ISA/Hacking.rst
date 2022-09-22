@@ -22,12 +22,12 @@ To choose a proper format for your extended instruction, the number of src/dst
 operands, the type of operands (imm/reg), and the number of bits to be encoded
 should be considered. R, I, and S are recommended --- B is just a complicated
 version of S, and U and J have no `funct3` field, which may occupy the whole
-line of instruction slots (refer to :ref:`constraint-label`
+line of instruction slots (refer to :ref:`next section <Constraints>`
 for more detials). Therefore, we have 32 bits in total: 7 bits are  occupied
 by the opcode; 3 bits are occupied for `funct3`; each register occupies 5 bits
 ($2^5=32$ ISA registers); immediate operand can either be 7 or 11 bits.
 
-The instruction format are described in the [risc-v opcodes](https://github.com/riscv/riscv-opcodes)
+The instruction format are described in the `risc-v opcodes <https://github.com/riscv/riscv-opcodes>`__
 repo, and you can open `opcodes-rv32i`, the most basic module of the RISC-V ISA,
 for examples. To understand this file, we use
 `addi <https://github.com/riscv/riscv-opcodes/blob/03be826f17faedcaee7f60223f402850e254df0a/opcodes-rv32i#L24>`__
@@ -48,7 +48,6 @@ for more details. This Python dict declares the bit range this token occupies.
 The semantics of each token id can be understood by knowing their bit range,
 acompanied with the figure of the instruction format.
 
-.. _constraint-label:
 Constraints
 -----------
 
