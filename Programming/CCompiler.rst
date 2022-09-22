@@ -16,9 +16,7 @@ IR metadata.
 
 Here we extend three pragmas:
 
-  1. ``#pragma ss dfg [unroll(x)]``: This pragma annotates an innermost loop or a compound statement (refer 
-    `this repo <https://github.com/PolyArch/dsa-apps/tree/polyarch/compiled/Dsp/cholesky.c>`__ for more details),
-    which indicates the memory accesses and computaiton within the annotated region will be mapped to our decoupled-spatial execution.
+  1. ``#pragma ss dfg [unroll(x)]``: This pragma annotates an innermost loop or a compound statement (refer  `this repo <https://github.com/PolyArch/dsa-apps/tree/polyarch/compiled/Dsp/cholesky.c>`__ for more details), which indicates the memory accesses and computaiton within the annotated region will be mapped to our decoupled-spatial execution.
 
     * The ``unroll`` clause allows users to manually tune the resource occupation of the code region. If ``x=-1``, the compiler will
       automatically explore the unrolling degree.
