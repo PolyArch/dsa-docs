@@ -12,11 +12,12 @@ you can simply setup the environment by typing to build a docker image:
 
      $ sudo docker build . -t polyarch/dsa-framework:latest
 
-Then you can start a docker container by typing:
+Then you can start a docker container by executing command below. The docker option `-v /home/<user>/dsa-share:/root/dsa-share` allows you to share files between 
+host machine and docker container.
 
 .. code-block:: shell
 
-        $ sudo docker run -tid --name=overgen polyarch/dsa-framework:latest /usr/bin/zsh
+        $ sudo docker run -tid -v /home/<your username>/dsa-share:/root/dsa-share --name=overgen polyarch/dsa-framework:latest /usr/bin/zsh
 
 
 Or, more aggressively, you can build the image and start the container with one command
