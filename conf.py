@@ -21,7 +21,7 @@ subprocess.call('doxygen Doxyfile.scheduler.in', shell=True)
 # -- Project information -----------------------------------------------------
 
 project = 'Decoupled Spatial Architecture Framework'
-copyright = '2020, Tony Nowatzki, Jian Weng, Sihao Liu, Vidushi Dadu'
+copyright = '2022, Tony Nowatzki, Jian Weng, Sihao Liu, Vidushi Dadu, Dylan Kupsh'
 author = 'PolyArch Resesarch Team'
 
 # The full version, including alpha/beta/rc tags
