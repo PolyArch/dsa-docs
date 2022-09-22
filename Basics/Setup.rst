@@ -38,14 +38,23 @@ container starts, you should build the framework infrastructures from the source
 
 .. code-block:: shell
 
-      # out of docker container
-      $ sudo docker attach og
-      # in docker container
-      $ cd dsa-framework
-      $ ./scripts/init-submodules.sh # initialize all submodules, skip this step if you are using Docker
-      $ source ./setup.sh # setup environement variables
-      $ make all -j # compile all infrastructure
-      $ source chipyard/env.sh # soruce it for RISCV gnu toochains, only do this for the first time
+     # Attach docker container just created
+     $ sudo docker attach overgen
+
+     # Inside the docker, enter dsa-framework root folder
+     $ cd /root/dsa-framework
+      
+     # Initialize all submodules, SKIP this step if you are using docker
+     $ ./scripts/init-submodules.sh
+
+     # Setup dsa-framework environment variables
+     $ source ./setup.sh # setup environement variables
+     
+     # Compile the entire dsa-framework
+     $ make all -j
+     
+     # Please source chipyard/env.sh manually if this is a first time build
+     $ source chipyard/env.sh
 
 NOTE: If you just want temporarily leave the container (not close),
 you should just ``<Ctrl-p><Ctrl-q>`` to detach, instead of typing ``exit``.
