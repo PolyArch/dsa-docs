@@ -36,8 +36,8 @@ container starts, you should build the framework infrastructures from the source
       $ sudo docker attach og
       # in docker container
       $ cd dsa-framework
-      $ source ./setup.sh # setup environement variables
       $ ./scripts/init-submodules.sh # initialize all submodules, skip this step if you are using Docker
+      $ source ./setup.sh # setup environement variables
       $ make all -j # compile all infrastructure
       $ source chipyard/env.sh # soruce it for RISCV gnu toochains, only do this for the first time
 
