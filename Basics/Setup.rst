@@ -43,3 +43,12 @@ container starts, you should build the framework infrastructures from the source
 NOTE: If you just want temporarily leave the container (not close),
 you should just ``<Ctrl-p><Ctrl-q>`` to detach, instead of typing ``exit``.
 
+Examples
+--------
+
+To verify the repo is successfully built, you can
+
+
+.. code-block:: shell
+
+   $ cd

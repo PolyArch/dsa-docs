@@ -38,19 +38,15 @@ What can DSAGEN be useful for?
   * At the basic level, DSAGEN can be used as a baseline for other accelerators.  DSAGEN
     is fairly domain-agnostic, so it can be seen as a non-specialized spatial architecture
     baseline.  
-  
   * DSAGEN can also be used in studies of novel spatial architecture features.  One can add
     a new feature, and expose it at the ISA level fairly easily (and with a little more effort
     add a compiler pass and maybe pragmas to support it).
-
   * The interactions between CPUs and accelerators are also extremely intersting, including
     caching, multicore, networks, etc.  DSAGEN
     has an interface with a gem5 core, can be extended to other cores).  It currently uses
     RISCV as the interface.
-
   * DSAGEN has a spatial architecture compiler that can be independently useful for various
     other architecture proposals, with hopefully modest implementation overhead.
-
   * It is our end-goal to be able to deliver reliable hardware generation, although the
     infrastructure is in the very early stages of being able to supply that. [#]_ 
 
