@@ -1,5 +1,5 @@
 Setup
-========================================================
+=====
 
 Prerequisites
 -------------
@@ -49,7 +49,12 @@ Examples
 
 To verify the repo is successfully built, you can
 
-
 .. code-block:: shell
 
-   $ cd
+   $ cd dsa-apps/demo
+   $ ./run.sh ss-vecadd.out
+
+The command above make a simple vector addition example compiled by LLVM and simulated in Gem5.
+
+All the compiled applications are developed by the same software development kit (SDK),
+refer to :doc:`Programming/SDKWalkthrough` for more details.
