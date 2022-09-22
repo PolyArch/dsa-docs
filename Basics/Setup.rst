@@ -32,8 +32,14 @@ container starts, you should build the framework infrastructures from the source
 
 .. code-block:: shell
 
+      # out of docker container
+      $ sudo docker attach og
+      # in docker container
       $ cd dsa-framework
       $ source setup.sh # setup environement variables
       $ make all
       $ source chipyard/env.sh # soruce it for RISCV gnu toochains
+
+NOTE: If you just want temporarily leave the container (not close),
+you should just ``<Ctrl-p><Ctrl-q>`` to detach, instead of typing ``exit``.
 
