@@ -60,7 +60,7 @@ container starts, you should build the framework infrastructures from the source
      # Please source chipyard/env.sh manually if this is a first time build
      $ source chipyard/env.sh
 
-NOTE: If you just want temporarily leave the container (not close),
+NOTE: If you just want temporarily leave the container (detach, not close),
 you should just ``<Ctrl-p><Ctrl-q>`` to detach, instead of typing ``exit``.
 
 Examples
