@@ -77,3 +77,15 @@ The command above make a simple vector addition example compiled by LLVM and sim
 
 All the compiled applications are developed by the same software development kit (SDK),
 refer to :ref:`SDK Section <Pragma+C Programming>` for more details.
+
+Prebuilt
+--------
+
+You can also download a pre-built docker image `here <https://drive.google.com/drive/folders/1ymP61tObuChBcKl_1_cPC37o4DzbkHSU?usp=sharing>`__, which
+contains the entire dsa-framework with all toolchains built.
+
+You can import the docker image and use dsa-framework by doing:
+
+.. code-block:: shell
+
+   $ docker import <downloaded tar file>.tar polyarch/dsa-framework:latest
