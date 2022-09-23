@@ -17,7 +17,7 @@ host machine and docker container.
 
 .. code-block:: shell
 
-        $ sudo docker run -tid -v /home/<your username>/dsa-share:/root/dsa-share --name=overgen polyarch/dsa-framework:latest /usr/bin/zsh
+        $ sudo docker run -tid -v /home/<your username>/dsa-share:/root/dsa-share --name=overgen polyarch/dsa-framework:latest /bin/bash
 
 
 Or, more aggressively, you can build the image and start the container with one command
@@ -39,8 +39,9 @@ container starts, you should build the framework infrastructures from the source
 
 .. code-block:: shell
 
-     # Attach docker container just created
+     # Attach docker container just created and use zsh
      $ sudo docker attach overgen
+     $ zsh
 
      # Inside the docker, enter dsa-framework root folder
      $ cd /root/dsa-framework
