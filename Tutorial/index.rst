@@ -120,11 +120,11 @@ Then, build the docker image:
 Related Papers
 --------------
 
-#. S. Liu, J. Weng, D. Kupsh, A. Sohrabizadeh, Z. Wang, L. Guo, J. Liu, M. Zhulin, L. Zhang, J. Cong, T. Nowatzki, "OverGen: Improving FPGA Usability through Domain-specific Overlay Generation" in MICRO 2022. 
-#. J. Weng, S. Liu, V. Dadu, Z. Wang, and T. Nowatzki, “DSAGEN: Synthesizing programmable spatial accelerators” in ISCA 2020.
-#. J. Weng, S. Liu, Z. Wang, V. Dadu, and T. Nowatzki, “A hybrid systolicdataflow architecture for inductive matrix algorithms” in HPCA 2020.
-#. V. Dadu and T. Nowatzki, “Towards general purpose acceleration by exploiting common data-dependence forms” in MICRO 2019.
-#. T. Nowatzki, V. Gangadhar, N. Ardalani, and K. Sankaralingam, “Stream-Dataflow Acceleration” in ISCA 2017.
+#. Sihao Liu, Jian Weng, Dylan Kupsh, Atefeh Sohrabizadeh, Zhengrong Wang, Licheng Guo, Jiuyang Liu, Maxim Zhulin, Lucheng Zhang, Jason Cong and Tong Nowatzki, "OverGen: Improving FPGA Usability through Domain-specific Overlay Generation" in MICRO 2022. 
+#. Jian Weng, Sihao Liu, Vidushi Dadu, Zhengrong Wang and Tony Nowatzki, “DSAGEN: Synthesizing programmable spatial accelerators” in ISCA 2020.
+#. Jian Weng, Sihao Liu, Zhengrong Wang, Vidushi Dadu and Tong Nowatzki, “A hybrid systolicdataflow architecture for inductive matrix algorithms” in HPCA 2020.
+#. Vidushi Dadu, Sihao Liu and Tong Nowatzki, “Towards general purpose acceleration by exploiting common data-dependence forms” in MICRO 2019.
+#. Tong Nowatzki, Vinay Gangadhar, Newsha Ardalani, and Karu Sankaralingam, “Stream-Dataflow Acceleration” in ISCA 2017.
 
 .. toctree::
    :maxdepth: 1
