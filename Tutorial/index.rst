@@ -111,11 +111,13 @@ Start by cloning the repository:
    $ git clone https://github.com/PolyArch/dsa-framework.git
    $ cd dsa-framework
 
-Then, build the docker image:
+Build the docker image:
 
 .. code-block:: bash
 
    $ docker build .
+
+Then, follow this :ref:`Setup` page to continue installation of dsa-framework.
 
 Related Papers
 --------------
