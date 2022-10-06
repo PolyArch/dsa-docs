@@ -66,7 +66,7 @@ Syllabus and Schedule
 
 **10-Minute Break**
 
-**Build your own Domain-specific Accelerator (60 Minutes):** [slides coming soon]
+**Build your own Domain-specific Accelerator (60 Minutes):** [:download:`slides<slides/2-hardware.pptx>`]
 
 - Introducing the concept of Architecture Description Graph (ADG)
 
@@ -83,7 +83,7 @@ Syllabus and Schedule
 
 **10-Minute Break**
 
-**Automatic Design Space Exploration: (40 Minutes)** [download link :download:`slides<slides/tutorial-intro.pptx>`]
+**Automatic Design Space Exploration: (40 Minutes)** [:download:`slides<slides/3-dse.pptx>`]
 
 - Introduction to the Design Space Explorer
    
