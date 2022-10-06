@@ -83,7 +83,7 @@ Syllabus and Schedule
 
 **10-Minute Break**
 
-**Automatic Design Space Exploration: (40 Minutes)** [slides coming soon]
+**Automatic Design Space Exploration: (40 Minutes)** [download link :download:`slides<slides/tutorial-intro.pptx>`]
 
 - Introduction to the Design Space Explorer
    
