@@ -41,13 +41,13 @@ Syllabus and Schedule
 
 .. download link :download:`slides<slides/tutorial-intro.pptx>`
 
-**Introduction (30 Minutes):** [slides coming soon]
+**Introduction (30 Minutes):** [:download:`slides<slides/0-intro.pptx>`]
 
 - The Decoupled-Spatial Programming Paradigm
 - Composing Hardware with Essential Primatives
 - The DSAGEN Framework Stack
 
-**Basic Programming (60 Minutes):** [slides coming soon]
+**Basic Programming (60 Minutes):** [:download:`slides<slides/1-compiler.pptx>`]
 
 - Introduction to the Automated Compilation flow
 
