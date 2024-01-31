@@ -55,7 +55,7 @@ container starts, you should build the framework infrastructures from the source
      $ source ./setup.sh # setup environement variables
      
      # Compile the entire dsa-framework
-     $ make all -j #  If you only use a single thread, the process may take 5 hours.
+     $ make all -j #  If you only use a single thread, the process may take 20 hours.
      
      # Please source chipyard/env.sh manually if this is a first time build
      $ source chipyard/env.sh
