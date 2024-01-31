@@ -70,7 +70,7 @@ To verify the repo is successfully built, you can
 
 .. code-block:: shell
 
-   $ cd dsa-apps/demo
+   $ cd dsa-apps/sdk/compiled
    $ ./run.sh ss-vecadd.out
 
 The command above make a simple vector addition example compiled by LLVM and simulated in Gem5.
