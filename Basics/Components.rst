@@ -29,7 +29,7 @@ We have three benchmark suites implemented for demonstration.
   `Machsuite <http://breagen.github.io/MachSuite/>`__ is a benchmark suite intended for accelerator-centric research.  A subset of workloads are implemented.
 
 **DSP:**
-  Digital signal processing (DSP) is a benchmark suite from our prior work `REVEL <http://https://ieeexplore.ieee.org/document/9065593>`__ for applications with moderate irregularity and imbalanced execution frequency within loop bodies.
+  Digital signal processing (DSP) is a benchmark suite from our prior work `REVEL <https://ieeexplore.ieee.org/document/9065593>`__ for applications with moderate irregularity and imbalanced execution frequency within loop bodies.
 
 
 **Xilinx Vision:**

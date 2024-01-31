@@ -55,7 +55,7 @@ container starts, you should build the framework infrastructures from the source
      $ source ./setup.sh # setup environement variables
      
      # Compile the entire dsa-framework
-     $ make all -j
+     $ make all -j #  If you only use a single thread, the process may take 20 hours.
      
      # Please source chipyard/env.sh manually if this is a first time build
      $ source chipyard/env.sh
@@ -70,7 +70,7 @@ To verify the repo is successfully built, you can
 
 .. code-block:: shell
 
-   $ cd dsa-apps/demo
+   $ cd dsa-apps/sdk/compiled
    $ ./run.sh ss-vecadd.out
 
 The command above make a simple vector addition example compiled by LLVM and simulated in Gem5.
